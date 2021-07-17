@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header class="header-apps-title">
+      <h1>Bookshelf Apps</h1>
+    </header>
+    <main>
+      <!-- Input Book Section -->
+      <section id="inputSection">
+        <h2 class="header-new-book">Masukan Buku Baru</h2>
+        <form class="input-new-book" id="inputNewBook" autocomplete="off">
+          <div class="form-group">
+            <label for="inputTitleBook">Judul Buku</label>
+            <input type="text" name="inputTitleBook" id="inputTitleBook" required />
+          </div>
+          <div class="form-group">
+            <label for="inputAuthorBook">Penulis</label>
+            <input type="text" name="inputAuthorBook" id="inputAuthorBook" required />
+          </div>
+          <div class="form-group">
+            <label for="inputYearBook">Tahun Terbit</label>
+            <input type="number" name="inputYearBook" id="inputYearBook" required />
+          </div>
+          <div class="form-group">
+            <label for="inputBookIsComplete">Selesai dibaca</label>
+            <input type="checkbox" name="inputBookIsComplete" id="inputBookIsComplete" />
+          </div>
+          <button id="bookSubmit" type="submit">Masukkan buku ke rak <span id="readBook"> Belum selesai dibaca</span></button>
+        </form>
+      </section>
+      <!-- End Input Book Section -->
+
+      <!-- Search Book Section -->
+      <section id="searchSection">
+        <h2 class="header-search-bar">Cari Buku</h2>
+        <form id="searchBook">
+          <input id="searchBookTitle" type="text" placeholder="Judul Buku" />
+          <button id="searchSubmit" type="submit"><img src="https://img.icons8.com/ios-filled/15/000000/search.png" /></button>
+        </form>
+      </section>
+      <!-- End Search Book Section -->
+
+      <!-- Bookshelf Section -->
+      <section id="bookshelfSection">
+        <div class="uncompleted-book">
+          <h2 class="header-uncompleted-bar">Belum selesai dibaca</h2>
+          <div id="uncompletedBookList" class="book-list"></div>
+        </div>
+        <div class="completed-book">
+          <h2 class="header-completed-bar">Selesai dibaca</h2>
+          <div id="completedBookList" class="book-list"></div>
+        </div>
+      </section>
+      <!-- End Bookshelf Section -->
+    </main>
+
+    <footer>
+      <p>Submission Front End Pemula &#169; 2021, Muhamad Fikri</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/manipulation.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
